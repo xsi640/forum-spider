@@ -12,4 +12,5 @@ import com.suyang.domain.Article;
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 	@Query("SELECT o FROM Article o WHERE o.Title like %:title%")
 	Page<Article> findByLikeTitle(@Param("title") String title, Pageable pageable);
+	int countByUrl(String url);
 }

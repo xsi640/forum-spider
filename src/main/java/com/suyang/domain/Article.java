@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class Article {
@@ -15,8 +16,11 @@ public class Article {
 	private String url;
 	@Column(nullable = false)
 	private String title;
+	@Lob
 	@Column(nullable = false)
 	private String content;
+	@Column(nullable = false)
+	private long webSiteId;
 
 	public long getId() {
 		return id;
@@ -48,6 +52,14 @@ public class Article {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public long getWebSiteId() {
+		return webSiteId;
+	}
+
+	public void setWebSiteId(long webSiteId) {
+		this.webSiteId = webSiteId;
 	}
 
 }

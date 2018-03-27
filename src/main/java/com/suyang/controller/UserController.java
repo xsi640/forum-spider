@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.poreader.common.CryptoUtils;
 import com.suyang.domain.User;
 import com.suyang.exceptions.APIException;
 import com.suyang.exceptions.APIExceptionType;
 import com.suyang.repository.UserRepository;
-import com.suyang.utils.CryptoUtils;
 
 @RestController
 public class UserController {
